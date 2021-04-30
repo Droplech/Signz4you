@@ -44,20 +44,20 @@ $(document).ready(function(){
 
 
 
-    let rand = [1,2,3];
+    // let rand = [1,2,3];
     
 
-    function fun() { 
+    // function fun() { 
         
-        $('.head_bg_item').removeClass('head_bg_item-active');
-        let randNum = rand[Math.floor(Math.random() * rand.length)];
+    //     $('.head_bg_item').removeClass('head_bg_item-active');
+    //     let randNum = rand[Math.floor(Math.random() * rand.length)];
         
-        $('.head_bg_item').eq(randNum).addClass('head_bg_item-active');
+    //     $('.head_bg_item').eq(randNum).addClass('head_bg_item-active');
    
 
-    } 
+    // } 
     
-    fun();
+    // fun();
 
     new Swiper ('.slider_container_txt',{
         autoplay: {
