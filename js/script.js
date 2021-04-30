@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 
 
-    let rand = [0,1,2,3];
+    let rand = [1,2,3];
     
 
     function fun() { 
@@ -72,15 +72,18 @@ $(document).ready(function(){
 
 
 
-
+    // const Array = $('.head_bg_item')
+    // console.log(rand)
+    
    
 
 
 
+    // var array_img = $('.head_bg_item')
 
+    // var numRand = Ma.floor(Math.random() * array_img.length )
 
-
-
+    // $('.head_bg_item').src = 
 
 
 
