@@ -254,6 +254,8 @@ a{
     padding: 0 13px;
     flex-wrap: wrap;
     margin-top: 88px;
+    justify-content: center;
+    
 }
 
 .about_us_wrapper .block_photo_list .photo_list_item{
@@ -278,6 +280,7 @@ a{
     background-image: url('../img/footer/bg.png');
     padding-bottom: 196px;
     position: relative;
+    background-size: cover;
 }
 .footer::before{
     content: "";
@@ -341,6 +344,7 @@ a{
 }
 
 
+
 .footer_wrapper .left_block_list ul:nth-child(-n+2)::after{
     content: "";
     position: absolute;
@@ -382,6 +386,12 @@ a{
     display: flex;
     margin-top: 33px;
 }
+
+.footer_wrapper .secial_links .secial_links_list{
+    display: flex;
+}
+
+
 .footer_wrapper .secial_links a{
     display: block;
     width: 31px;
@@ -414,7 +424,11 @@ a{
     color: #fff;
 }
 
-
+.footer_wrapper .secial_links a:hover svg path,
+.footer_wrapper .secial_links a:hover i{
+    fill: #C51717;
+    color: #C51717;
+}
 
 
 
@@ -439,7 +453,7 @@ a{
 .contacts_wrapper .form_block{
     background-color: #EEF6F8;
     padding: 34px 120px 80px;
-    max-width: 867px;
+    width: 100%;
 }
 
 .contacts_wrapper .form_block form label{
@@ -957,25 +971,35 @@ a{
     margin: 0 0 26px 0;
 }
 
-
-.upload_content{
+.upload_form_blck{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+}
+
+
+
+
+
+.upload_content{
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
 }
 
 
 
 .upload_content .form_block {
-    width: 867px;
+    width: 100%;
     
 }
-
+.upload_content .form_block  div form{
+    width: 867px;
+}
 
 .upload_content .form_block .file_form{
     background-color: #EEF6F8;
     padding: 34px 50px 80px;
-    width: 100%;
+    width: 867px;
     border-radius: 5px;
 }
 
@@ -986,7 +1010,9 @@ a{
     font-family: 'Open Sans', sans-serif;
     
 }
-
+.upload_form_blck .form_right_block{
+    width: 567px;
+}
 
 .upload_content .form_block form input{
     width: 100%;
@@ -1149,7 +1175,7 @@ a{
 .upload_wrapper .form_block .link_form{
     background-color: rgba(196, 196, 196, 0.15);
     padding: 10px 50px 57px;
-    width: 100%;
+    width: 867px;
     margin-top: 5px;
     box-shadow: inset 0 15px 19px -14px rgb(0 0 0 / 50%);
 }
@@ -1280,7 +1306,7 @@ a{
 .upload_fild_block{
     width: 567px;
 }
-.upload_fild_block .title{
+.recomend_block .title{
     font-weight: 700;
     font-size: 24px;
     color: #000;
@@ -1295,26 +1321,27 @@ a{
 
 
 
-.upload_fild_block .recomend p{
+.recomend p{
     font-weight: 400;
     font-size: 16px;
     color: #4F4F4F;
     font-family: 'Open Sans', sans-serif;
-    margin: 25px 0;
+    margin: 18px 0;
+    padding-left: 35px;
 }
 
-.upload_fild_block .recomend p span{
+.recomend p span{
     font-weight: 700;
 }
 
-.upload_fild_block .file_help{
+.file_help{
     background-color: #F6F6F6;
     padding: 53px 45px 53px 68px;
     margin-top: 50px;
     border-radius: 5px;
 }
 
-.upload_fild_block .file_help span{
+.file_help span{
     font-weight: 700;
     font-size: 20px;
     color: #000;
@@ -1323,7 +1350,7 @@ a{
     margin-bottom: 30px;
 }
 
-.upload_fild_block .file_help a{
+.file_help a{
     font-weight: 400;
     font-size: 20px;
     color: #000;
@@ -1336,7 +1363,7 @@ a{
 
 
 
-.upload_fild_block .services_block{
+.link_form_block .services_block{
     margin-top: 5px;
     background-color: #EEF6F8;
     display: flex;
@@ -1344,12 +1371,12 @@ a{
     flex-wrap: wrap;
     padding: 115px 5px 45px ;
 }
-.upload_fild_block .services_block div{
+.link_form_block .services_block div{
     margin: 0 17px;
     margin-bottom: 22px;
 }
 
-.upload_fild_block .capcha_block{
+.option_form_block .capcha_block{
     background-color: #F6F6F6;
     border-radius: 5px;
     padding-bottom: 58px;
@@ -1359,12 +1386,13 @@ a{
 
 
 
-.upload_fild_block .capcha_block form{
+.option_form_block .capcha_block form{
     text-align: center;
+    width: 100% !important;
 }
 
 
-.upload_fild_block .capcha_block form button{
+.option_form_block .capcha_block form button{
     border-radius: 10px;
     border: 2px solid #AA0B0B;
     outline: none;
@@ -1380,7 +1408,11 @@ a{
     margin-top: 30px;
 }
 
-.upload_fild_block .capcha_block form button .btn_icon{
+
+
+
+
+.option_form_block .capcha_block form button .btn_icon{
     display: flex;
     padding-top: 5px;
 }
@@ -1388,7 +1420,7 @@ a{
 
 
 
-.upload_fild_block .capcha_block form  button span {
+.option_form_block .capcha_block form  button span {
     font-size: 24px;
     font-weight: 400;
     color: #fff;
@@ -1397,13 +1429,24 @@ a{
 
 
 
-.upload_fild_block .capcha_block form button .btn_icon .btn_icon1 {
+.option_form_block .capcha_block form button .btn_icon .btn_icon1 {
     margin-top: 4px;
 }
 
 
+.option_form_block .capcha_block form button:hover{
+    background: #fff;
+   
+}
 
 
+.option_form_block .capcha_block form button:hover span{
+    color: #AA0B0B;
+}
+
+.option_form_block .capcha_block form button:hover .btn_icon svg path{
+    fill: #AA0B0B;
+}
 
 
 .coroplast_wrapper{
@@ -1698,12 +1741,12 @@ a{
 
 .products_content_item .txt span{
     font-weight: 700;
-    font-size: 30px;
+    font-size: 22px;
     text-transform: uppercase;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     display: inline-block;
-    padding: 0 0;
+    padding: 5px 0;
 }
 
 
@@ -2066,6 +2109,18 @@ a{
     display: flex;
     justify-content: flex-end;
 }
+
+
+.burger_logo{
+    position: absolute;
+    top: 32px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    
+}
+
+
 .burger_button{
     width: 35px;
     height: 18px;
@@ -2398,14 +2453,21 @@ a{
         font-size: 23px;
         padding: 4px 0;
     }
-    .upload_content .form_block{
-        width: 700px;
-    }
+   
     .coroplast_wrapper_item-mod{
         flex-basis: 22%;
     }
     .coroplast_wrapper_item{
         width: 240px;
+    }
+
+    .upload_content .form_block div form,
+    .upload_wrapper .form_block .link_form,
+    .upload_content .form_block .file_form{
+        width: 700px;
+    }
+    .upload_wrapper .option_form .txt{
+        max-width: 400px;
     }
 }
 
@@ -2433,6 +2495,18 @@ a{
 
 
 @media screen and (max-width: 1280px){
+    .upload_content .form_block div form, 
+    .upload_wrapper .form_block .link_form, 
+    .upload_content .form_block .file_form{
+        width: 600px;
+        
+    }
+    .form_right_block {
+        width: 530px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     .faq_wrapper .faq_wrapper_item .img{
         height: 250px;
     }
@@ -2454,12 +2528,10 @@ a{
     .payment_info_content .description_card{
         width: 500px;
     }
-    .upload_content .form_block {
-        width: 570px;
-    }
+   
     .upload_content .form_block form .button_block{
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
     }
     .upload_content .form_block form .button_block button{
         margin-bottom: 30px;
@@ -2490,6 +2562,28 @@ a{
 }
 
 @media screen and (max-width: 1024px){
+    .upload_form_blck{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .upload_form_blck:first-child{
+        flex-direction: column-reverse;
+    }
+    .upload_content .form_block div form, 
+    .upload_wrapper .form_block .link_form, 
+    .upload_content .form_block .file_form{
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    .upload_form_blck .form_right_block{
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    .link_form_block .services_block{
+        flex-direction: row;
+    }
     .navigation_wrapper .nav_list li a{
         font-size: 15px;
     }
@@ -2517,6 +2611,7 @@ a{
     }
     .about_us_wrapper .block_photo_list .photo_list_item{
         margin: 0 32px;
+        margin-bottom: 30px;
     }
     .coroplast_wrapper .select_order{
         flex-wrap: wrap;
@@ -2539,7 +2634,7 @@ a{
         justify-content: center;
     }
     .upload_content .form_block{
-        width: 90%;
+        width: 100%;
     }
     .upload_content .form_block form .button_block{
         justify-content: space-between;
@@ -2561,6 +2656,24 @@ a{
 }
 
 @media screen and (max-width: 770px){
+    .footer_wrapper .left_block_list ul li{
+        padding: 6px 24px;
+        margin-left: -24px;
+    }
+    .footer_wrapper .left_block_list ul li a{
+        display: block;
+        width: 100%;
+    }
+    .footer_wrapper .left_block_list ul li:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+        
+    }
+    .footer_wrapper .secial_links .secial_links_list{
+        width: 137px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
     .footer .block_pag_button{
         display: block;
         display: flex;
@@ -2644,8 +2757,12 @@ a{
         border-bottom: 1px solid #DD2323;
         width: 47%;
         margin-bottom: 17px;
+        
     }
 
+    /* .footer_wrapper .right_block{
+        padding-left: 24px;
+    } */
 
 
 
@@ -2669,7 +2786,10 @@ a{
     }
     .footer_wrapper .secial_links{
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+       
     }
     .footer_wrapper .secial_links p{
         width: 100%;
@@ -2724,7 +2844,7 @@ a{
         min-width: 257px;
     }
     .upload_content .form_block form .button_block{
-        justify-content: center;
+        justify-content: space-between;
     }
     .coroplast_wrapper_item-mod {
         flex-basis: 29%;
@@ -2783,9 +2903,28 @@ a{
     .page_pagination{
         display: none;
     }
+    .footer_wrapper .secial_links a{
+        margin-right: 0;
+    }
+    .products_content_item .txt {
+        padding: 4px 0;
+    }
 }
 
 @media screen and (max-width: 500px){
+    /* .footer_wrapper .secial_links{
+        width: 40%;
+    } */
+    .upload_content .form_block div form, 
+    .upload_wrapper .form_block .link_form, 
+    .upload_content .form_block .file_form{
+      
+        width: 100%;
+    }
+    .upload_form_blck .form_right_block{
+       
+        width: 100%;
+    }
     .mab_title{
         display: block;
     }

@@ -31,12 +31,26 @@ $(document).ready(function(){
             $('.burger_button').addClass('active')
             $('.burger_content').fadeIn()
             $('html').css("overflow","hidden")
+            $('.mob_header .logo').css(
+                {
+                    'opacity':'0',
+                    'transition': ".6s"
+                }
+                
+                )
         }else{
             $('.burger_button').removeClass('active')
             $('.burger_content').fadeOut()
             $('html').css("overflow","auto")
+            $('.mob_header .logo').css("opacity","1")
         }
         
+    })
+
+    $('.burger .btn_back').click(function(){
+        $('.burger_content').fadeOut()
+        $('.mob_header .logo').css("opacity","1")
+        $('html').css("overflow","auto")
     })
 
 
