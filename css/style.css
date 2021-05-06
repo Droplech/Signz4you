@@ -2588,6 +2588,9 @@ a{
         font-size: 16px;
         padding: 9px 0;
     }
+    .products_content{
+        justify-content: center;
+    }
    
 }
 
@@ -2693,6 +2696,7 @@ a{
     .coroplast_wrapper .select_order .order_n .order_list_sec ul{
         width: 740px;
     }
+   
    
 }
 
