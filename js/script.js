@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('.select').on('click', '.select__head', function () {
         if ($(this).hasClass('open')) {
             $(this).removeClass('open');
@@ -58,13 +59,13 @@ $(document).ready(function(){
 
 
 
-    // let rand = [1,2,3];
+    // let rand = $('.head_bg_item');
     
 
     // function fun() { 
         
     //     $('.head_bg_item').removeClass('head_bg_item-active');
-    //     let randNum = rand[Math.floor(Math.random() * rand.length)];
+    //     let randNum = rand[Math.floor(rand.length)];
         
     //     $('.head_bg_item').eq(randNum).addClass('head_bg_item-active');
    
@@ -72,6 +73,15 @@ $(document).ready(function(){
     // } 
     
     // fun();
+
+
+
+   
+
+
+
+
+
 
     new Swiper ('.slider_container_txt',{
         autoplay: {
@@ -86,18 +96,7 @@ $(document).ready(function(){
 
 
 
-    // const Array = $('.head_bg_item')
-    // console.log(rand)
-    
-   
 
-
-
-    // var array_img = $('.head_bg_item')
-
-    // var numRand = Ma.floor(Math.random() * array_img.length )
-
-    // $('.head_bg_item').src = 
 
 
 

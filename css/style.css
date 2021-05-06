@@ -259,7 +259,7 @@ a{
 }
 
 .about_us_wrapper .block_photo_list .photo_list_item{
-    flex-basis: 28%;
+    flex-basis: calc(33% - 80px);
     border-radius: 10px;
     overflow: hidden;
     margin: 0 38px;
@@ -293,10 +293,11 @@ a{
 }
 .footer::after{
     content: "";
+    height: 4px;
+    width: 100%;
     position: absolute;
     top: -25%;
-    width: 100%;
-    height: 4px;
+    left: 0;
     background-color: #fff;
 }
 
@@ -980,11 +981,7 @@ a{
 
 
 
-.upload_content{
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; */
-}
+
 
 
 
@@ -1689,7 +1686,20 @@ a{
     padding-bottom: 70px;
     margin-top: 100px;
     background-size: cover;
+    position: relative;
 }
+
+.popular_products::after{
+    content: "";
+    position: absolute;
+    top: 2%;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+
+
 .popular_products_wrapper{
     padding-top: 130px;
 }
@@ -1787,6 +1797,7 @@ a{
 .bg_img_header img{
     width: 100%;
     height: 684px;
+    object-fit: cover;
 }
 
 
@@ -2432,8 +2443,27 @@ a{
     background-color: #fff;
 }
 
+.index_footer::after,
+.footer_coroplast::after{
+    display: none;
+}
 
-@media screen and (max-width: 1440px){
+
+
+@media screen and (max-width: 1680px){
+    .top_nav_block ul li .submenu_list{
+        min-width: 300px;
+    }
+    .coroplast_wrapper_item-mod{
+        margin-right: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 1460px){
+    .top_nav_block ul li .submenu_list {
+        min-width: 100%;
+    }
     .faq_wrapper{
         padding-left: 50px;
     }
@@ -2446,9 +2476,9 @@ a{
     .page_nav_line img{
         width: 80%;
     }
-    .about_us_wrapper .block_photo_list .photo_list_item{
-        flex-basis: 27%;;
-    }
+    /* .about_us_wrapper .block_photo_list .photo_list_item{
+        flex-basis: 27%;
+    } */
     .products_content_item .txt span{
         font-size: 23px;
         padding: 4px 0;
@@ -2477,20 +2507,20 @@ a{
         flex-basis: 28%;
     } 
     .coroplast_wrapper_item-mod{
-        flex-basis: 20%;
+        flex-basis: 23%;
     }
     .coroplast_wrapper_item-mod .img img{
         width: 80%;
     }
     .coroplast_wrapper_item{
-        width: 240px;
+        width: 220px;
     }
     .coroplast_wrapper_item .img img{
         width: 80%;
     }
-    .index_content .coroplast_wrapper .col_right{
+    /* .index_content .coroplast_wrapper .col_right{
         margin-right: -100px;
-    }
+    } */
 }
 
 
@@ -2514,9 +2544,9 @@ a{
     .faq_wrapper .faq_wrapper_item .txt p{
         font-size: 16px;
     }
-    .about_us_wrapper .block_photo_list .photo_list_item {
+    /* .about_us_wrapper .block_photo_list .photo_list_item {
         flex-basis: 26%;
-    }
+    } */
     .coroplast_wrapper .select_order{
         flex-wrap: wrap;
     }
@@ -2562,6 +2592,16 @@ a{
 }
 
 @media screen and (max-width: 1024px){
+    .footer::after{
+        top: -18%;
+    }
+    .navigation_wrapper{
+        justify-content: space-between;
+    }
+    .navigation_wrapper .nav_list{
+        margin-left: 0;
+    }
+    
     .upload_form_blck{
         flex-direction: column;
         justify-content: center;
@@ -2585,7 +2625,7 @@ a{
         flex-direction: row;
     }
     .navigation_wrapper .nav_list li a{
-        font-size: 15px;
+        font-size: 20px;
     }
     .navigation_wrapper .nav_list li:nth-child(-n+2) a::after{
         top: -5px;
@@ -2610,8 +2650,9 @@ a{
         font-size: 22px;
     }
     .about_us_wrapper .block_photo_list .photo_list_item{
-        margin: 0 32px;
+        margin: 0 20px;
         margin-bottom: 30px;
+        flex-basis: calc(33% - 50px);
     }
     .coroplast_wrapper .select_order{
         flex-wrap: wrap;
@@ -2656,6 +2697,7 @@ a{
 }
 
 @media screen and (max-width: 770px){
+  
     .footer_wrapper .left_block_list ul li{
         padding: 6px 24px;
         margin-left: -24px;
@@ -2802,10 +2844,10 @@ a{
     .logo_prod_ul{
         display: block;
     }
-    .about_us_wrapper .block_photo_list .photo_list_item {
+    /* .about_us_wrapper .block_photo_list .photo_list_item {
         flex-basis: 40%;
         margin-bottom: 30px;
-    }
+    } */
     .contacts_wrapper .form_block form .capcha_btn{
         flex-wrap: wrap;
     }
@@ -2908,6 +2950,14 @@ a{
     }
     .products_content_item .txt {
         padding: 4px 0;
+    }
+    .footer::after{
+        display: none;
+    }
+    .about_us_wrapper .block_photo_list .photo_list_item{
+        margin: 0 20px;
+        margin-bottom: 30px;
+        flex-basis: calc(45% - 35px);
     }
 }
 
